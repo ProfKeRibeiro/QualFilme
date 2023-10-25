@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é a Música? - Jogar</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/shortcut-icon - Copia.png" type="image/x-icon">
+</head>
+<body id="main">
+    <div class="cabecalho">
+        <div id="alert-pts" class="hidden alert-responsive"></div>
+    </div>
+    <div class="pontos"></div>
+
+    <div class="player">
+        <img src="./assets/play.png" id="play-music">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player id='gif' src="https://lottie.host/4cc031c5-9b14-450a-a41f-6824c00cd4c1/nrcbBwP7wN.json" background="transparent" speed="1" style="width: 60%; height: 50%" direction="1" mode="normal" loop autoplay></lottie-player>
+        <div id="alert-play" class="hidden "></div>
+    </div>
+    <div id="alert-resposta-errada" class="hidden "></div>
+    <div id="alert-ultima-chance" class="hidden "></div>
+    <div id="alert-erro" class="hidden">
+        <h1>POXA, NÃO FOI DESSA VEZ!</h1>
+        <h2>Tente novamente</h2>
+        <div class="menos-pontos"><h1>-5 pontos</h1></div>
+        <div class="metade-final">
+            <button class="next-song">Próxima música</button>
+            <img src="./assets/tristeza-1.svg" alt="">
+        </div>
+    </div>
+    <div id="alert-acerto2" class="hidden">
+        <h1>PARABÉNS, VOCÊ É BOM!</h1>
+        <h2>Continue assim para entrar no RANKING</h2>
+        <div class="mais-pontos2"></div>
+        <div class="metade-final">
+          
+            <button class="next-song2">Próxima música</button>
+            <img src="./assets/monstros_sa.png" alt="">
+
+        </div>
+    </div>
+    <div class="resposta">
+        <div class="input-answer">
+            <h2>qual é o nome do filme?</h2>
+            <input type="text" id="answer">
+        </div>
+        <button id="btn-check">Verificar</button>
+    </div>
+    <script src="./script-main.js"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+</body>
+</html>
